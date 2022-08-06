@@ -1,0 +1,52 @@
+// Khai báo biến Sass [tên biến]:[Giá trị]
+// Background :
+$bg-c1-purple :#b61984;
+$bg-transparent: rgba(0, 0, 0, 0);
+$bg-c1-light: #fff;
+$bg-none: none;
+//----------- Biến cho text --------------
+$text-c1-purple :#b61984;
+$text-c1-light: #fff;
+$text-c1-dark: #000;
+$text-c1-p: #181818; // Text size
+$text_input: grey;
+$text-xs: 12px;
+$text-ms: 14px;
+$text-base: 16px;
+$text-xl :18px;
+$text-2xl: 20px;
+$text-3xl: 30px;
+$text-4xl: 40px;
+$text-5xl: 50px;
+$text-6xl: 60px;
+$text-7xl: 70px;
+$text-8xl: 80px;
+$text-9xl: 90px;
+// Text font weight
+$text-light :300;
+$text-regular: 400;
+$text-semibold :600;
+$text-bold: 700;
+// border-radius 
+$br-btn: 50px;
+// padding input
+$pd-input: 1em 1em 1em 3.5em;
+// --------- Mixin : test ---------
+@mixin text($fs, $fw, $c) {
+    font-size: $fs;
+    font-weight: $fw;
+    color: $c;
+}
+
+@mixin button($fs, $fw, $c, $bd-c, $bg, $pd, $br, $bd-hover, $bg-hover, $c-hover) {
+    @include text($fs, $fw, $c);
+    border-color: $bd-c;
+    background-color: $bg;
+    padding: $pd;
+    border-radius: $br;
+    &:hover {
+        border-color: $bd-hover;
+        background-color: $bg-hover;
+        color: $c-hover;
+    }
+}
